@@ -46,6 +46,8 @@ const onFeedbackFormSubmit = event => {
          return;
     }
 
+    console.log(formData);
+    
     formEl.reset(); 
     localStorage.removeItem('feedback-form-state');
 }
