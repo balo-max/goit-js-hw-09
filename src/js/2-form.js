@@ -7,11 +7,11 @@ let formData = {
 
 const fillFormFields = () => {
     try {
-        if (localStorage.length === 0) {
+        const formDataFromLS = JSON.parse(localStorage.getItem('feedback-form-state'));
+
+        if (formDataFromLS === null) {
             return;
         }
-
-        const formDataFromLS = JSON.parse(localStorage.getItem('feedback-form-state'));
 
         formData = formDataFromLS;
 
